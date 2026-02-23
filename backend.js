@@ -1,5 +1,6 @@
 import express from 'express'; //import express
 import mongoose from 'mongoose'; //import mongoose
+import bodyParser from 'body-parser'; //import bodyParser
 
 //initializ the backend software to a variable
 const app = express();
@@ -15,4 +16,7 @@ mongoose.connect("mongodb+srv://admin:admin1234@cluster0.zzicnuz.mongodb.net/?ap
     }
     
 )
+
+//declaring a middleware
+app.use(bodyParser.json());
 
